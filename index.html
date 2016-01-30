@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>fw.mearie.org</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+    <style>
+        body { font-family: "Helvetica Neue", "Helvetica Neue Light", "HelveticaNeue-Light", "Arial", "Helvetica", "나눔고딕", "NanumGothic", "Nanum Gothic", sans-serif; font-size: 0.9em; font-weight: 200; width: 480px; margin: 3em auto; color: white; background: #397; }
+        h1 { text-align: center; font-size: 250%; line-height: 0.8; }
+        h1 img { display: block; margin: 0 auto; }
+        h2 { font-size: 150%; }
+        p { color: white; line-height: 1.5; }
+        a { color: #adc; text-decoration: underline; }
+        a:visited { text-decoration: none; }
+        ul { list-style: square; line-height: 1.5; padding-left: 1.5em; margin-left: 0; }
+    </style>
+</head>
+<body>
+    <h1><img src="/logo.png" width="117" height="117" alt="" />fw.<a href="http://mearie.org/">mearie.org</a></h1>
+    <p>이 도메인은 어디서 왔는지 리퍼러 정보를 남기지 않고 링크를 할 때 씁니당. 물론 서버 로그도 남기지 않습니다.</p>
+    <h2>사용법</h2>
+    <ul>
+        <li>링크는 해야 하지만 레퍼러를 보여 주지 않아야 할 주소가 있다고 하면</li>
+        <li>그런 주소가 <code>http://example.com/foo/bar/blah</code>라 하면</li>
+        <li>링크 주소를 <code>http://fw.mearie.org/example.com/foo/bar/blah</code>로 고친다</li>
+        <li>URL 스킴이 <code>https</code>라면 <code>http://fw.mearie.org/*example.com/foo/bar/blah</code> 식으로 쓴다</li>
+        <li>끗</li>
+    </ul>
+    <p>주의: 자바스크립트를 쓰므로 이미지 링크에는 효과가 없습니다. 이보세요! 여긴 지금 중환자실입니다. 전화는 없어요.</p>
+    <h2>좀 더 편한 방법</h2>
+    <p>HTML5 <a href="http://www.w3.org/TR/html5/interactive-elements.html#link-type-noreferrer"><code>rel="noreferrer"</code></a>을 이미 쓰고 있다면 <code>&lt;/body&gt;</code> 앞에 이런 코드를 넣어도 됩니다.</p>
+    <pre>&lt;script src="<a href="script">//fw.mearie.org/script</a>"&gt;&lt;/script&gt;</pre>
+    <p><a href="http://dahlia.kr/">홍민희</a> 님께서 만드신 코드를 적절히 뜯어 고쳤습니다 ㄱㅅㄱㅅ</p>
+    <h2 lang="en">Disclaimers</h2>
+    <p lang="en">The owner of this domain, Kang Seonghoon, doesn't have any responsibility on the generated URLs. The URL "generated" from this domain is actually transparent, compared to most URL shortening services, so I don't have any plan to add a feature to track users. In fact, this server doesn't collect any log for this particular domain at all. If you have to trace a malicious activity using this domain, it would be better to <a href="//google.com/">google</a> it.</p>
+</body>
+</html>
