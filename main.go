@@ -20,7 +20,7 @@ func main() {
     urlRegexp := regexp.MustCompile(`^/(\*?)((?:(?:[a-zA-Z0-9-]+\.)+[a-zA-Z0-9-]{2,}|(?:[0-9]+\.){3}[0-9]+)(?::[0-9]+)?(?:/.*)?)$`)
 
     http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-        m := urlRegexp.FindStringSubmatch(r.URL.Path)
+        m := urlRegexp.FindStringSubmatch(r.RequestURI)
         if m != nil {
             var url = "http://"
             if m[1] == "*" { url = "https://" }
