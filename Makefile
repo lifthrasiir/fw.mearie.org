@@ -1,4 +1,5 @@
 TAG=lifthrasiir/fw.mearie.org
+NAME=fw.mearie.org
 PORT=48001
 
 .PHONY: all
@@ -13,9 +14,8 @@ docker:
 
 .PHONY: run
 run: main docker
+	-docker rm ${NAME}-old
+	-docker rename ${NAME} ${NAME}-old && docker stop ${NAME}-old
 	docker run -d -p ${PORT}:80 -v /etc/ssl/certs:/etc/ssl/certs ${TAG}
-
-.PHONY: kill
-kill:
-	ID=$$(docker ps -f ancestor=${TAG} -q); [ -z "$$ID" ] || docker stop $$ID
+	-docker rm ${NAME}-old
 
